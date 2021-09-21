@@ -1,17 +1,23 @@
 import React from 'react'
 import { FaDotCircle, FaPhoneAlt, FaSun, FaUser } from 'react-icons/fa';
-import { MdDialpad } from 'react-icons/md';
+import { BiDialpadAlt } from 'react-icons/bi';
 
 export default function Footer() {
   return (
     <footer>
-      <FaPhoneAlt />
-      <FaUser />
-      <div id="dialpad-wrapper">
-        <MdDialpad />
+      <div class="icons-wrapper">
+        <FaPhoneAlt className="icon"/>
+        <FaUser className="icon"/>
       </div>
-      <FaSun />
-      <FaDotCircle />
+      <div id="dialpad-outer-wrapper">
+        <div id="dialpad-wrapper">
+          <BiDialpadAlt className="icon"/>
+        </div>
+      </div>
+      <div class="icons-wrapper">
+        <FaSun className="icon"/>
+        <FaDotCircle className="icon" id="icon-status"/>
+      </div>
     </footer>
   )
 }
