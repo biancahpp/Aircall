@@ -5,7 +5,7 @@ import { BiDialpadAlt } from 'react-icons/bi';
 export default function Footer() {
   return (
     <footer>
-      <div class="icons-wrapper">
+      <div className="icons-wrapper">
         <FaPhoneAlt className="icon"/>
         <FaUser className="icon"/>
       </div>
@@ -14,7 +14,7 @@ export default function Footer() {
           <BiDialpadAlt className="icon"/>
         </div>
       </div>
-      <div class="icons-wrapper">
+      <div className="icons-wrapper">
         <FaSun className="icon"/>
         <FaDotCircle className="icon" id="icon-status"/>
       </div>
