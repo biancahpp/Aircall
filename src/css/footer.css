@@ -1,0 +1,19 @@
+footer {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  height: 6vh;
+  width: 100%;
+  border-top: 1px solid #E9E9E8;
+  font-size: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer #dialpad-wrapper {
+  background-color: #43BF21;
+  color: white;
+  
+}

@@ -10,16 +10,17 @@
 }
 
 #app .container {
-  width: 376px;
-  height: 666px;
+  width: 37.6rem;
+  height: 66.6rem;
   z-index: 100;
+  position: relative;
 
-  background: white;
-  border-radius: 3px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .9);
+  background: #FDFDFC;
+  border-radius: .3rem;
+  box-shadow: 0 0 .5rem 0 rgba(0, 0, 0, .9);
 }
 
 #app .container-view {
-  padding: 20px;
+  padding: 2rem;
 }
 
