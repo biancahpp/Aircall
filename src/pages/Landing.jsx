@@ -5,22 +5,27 @@ import Content from '../components/Content.jsx';
 import { getCalls, updateCallArchive } from '../services/apiCalls.js';
 
 export default function Landing() {
-  const [calls, setCalls] = useState(null);
+  const [allCalls, setAllCalls] = useState([]);
+  const [notArchivedCalls, setNotArchivedCalls] = useState([]);
 
   const archiveAllCalls = async () => {
-    calls.forEach(async (call) => {
-      await updateCallArchive(call.id, {is_archived: true})
+    notArchivedCalls.forEach(async (call) => {
+      await updateCallArchive(call.id, true)
     })
+    setNotArchivedCalls([])
   }
 
   useEffect(() => {
-    getCalls().then(res => setCalls(res))
+    getCalls().then(res => {
+      setAllCalls(res)
+      setNotArchivedCalls(res.filter(call => !call.is_archived))
+    })
   }, [])
 
   return (
     <div className='container'>
       <Header/>
-      {calls ? <Content calls={calls} archiveAllCalls={archiveAllCalls}/> : <div> No calls </div>}
+      {notArchivedCalls && notArchivedCalls.length ? <Content calls={notArchivedCalls} archiveAllCalls={archiveAllCalls}/> : <div> No calls </div>}
       <Footer />
     </div>
   )
