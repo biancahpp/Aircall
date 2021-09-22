@@ -1,9 +1,18 @@
-import React from 'react';
-import { FiPhoneIncoming, FiPhoneOutgoing } from 'react-icons/fi'
+import React, { useState } from 'react';
+import { FiPhoneIncoming, FiPhoneOutgoing } from 'react-icons/fi';
+import { BiArchive } from 'react-icons/bi';
+import { updateCallArchive } from '../services/apiCalls';
 
-export default function CallCard({call}) {
+export default function CallCard({ call, archiveCall }) {
+  const [toggleArchive, setToggleArchive] = useState(false);
+
+  const archiveThisCall = async () => {
+    const res = await updateCallArchive(call.id, true);
+    res.is_archived && archiveCall(call.id)
+  }
+
   return (
-    <div className="call-card">
+    <div className="call-card" onClick={() => setToggleArchive(!toggleArchive)}>
       <div className="call-card-left">
         { call.direction === 'inbound'? <FiPhoneIncoming className="call-card-icon"/> : <FiPhoneOutgoing className="call-card-icon"/>}
         <div>
@@ -20,6 +29,11 @@ export default function CallCard({call}) {
           })}
         </span>        
       </div>
+      { toggleArchive &&
+        <div className="call-card-archive" onClick={archiveThisCall}>
+          <BiArchive />
+        </div>
+      }
     </div>
   )
 }
