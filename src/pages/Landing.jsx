@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
-import Content from '../components/Content.jsx';
 import { getCalls, updateCallArchive } from '../services/apiCalls.js';
+import Activity from '../components/Activity.jsx';
 
 export default function Landing() {
   const [allCalls, setAllCalls] = useState([]);
   const [notArchivedCalls, setNotArchivedCalls] = useState([]);
+  const [toggleFooter, setToggleFooter] = useState('activity');
 
   const archiveAllCalls = async () => {
     notArchivedCalls.forEach(async (call) => {
@@ -24,9 +24,8 @@ export default function Landing() {
 
   return (
     <div className='container'>
-      <Header/>
-      {notArchivedCalls && notArchivedCalls.length ? <Content calls={notArchivedCalls} archiveAllCalls={archiveAllCalls}/> : <div> No calls </div>}
-      <Footer />
+      <Activity allCalls={allCalls} notArchivedCalls={notArchivedCalls} archiveAllCalls={archiveAllCalls}/>
+      <Footer active={toggleFooter} setActive={setToggleFooter}/>
     </div>
   )
 }

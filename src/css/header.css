@@ -54,3 +54,7 @@ header h1 {
   background-color: transparent;
 }
 
+.header-active {
+  background-color: turquoise;
+  font-weight: bold;
+}

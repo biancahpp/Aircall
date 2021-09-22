@@ -2,16 +2,16 @@ import React from 'react';
 import AircallLogo from './AircallLogo.jsx';
 import { FiSliders } from 'react-icons/fi';
 
-const Header = ({title}) => {
+const Header = ({title, setToggle, toggle}) => {
   return (
     <header>
       <div className="header-left">
         <AircallLogo />
-        <h1>Activity</h1>
+        <h1>{title}</h1>
       </div>
       <div className="header-right">
-        <button>Inbox</button>
-        <button>All calls</button>
+        <button onClick={() => setToggle('inbox')} className={`${toggle === 'inbox' && 'header-active'}`}>Inbox</button>
+        <button onClick={() => setToggle('all')} className={`${toggle === 'all' && 'header-active'}`}>All calls</button>
         <button>
           <FiSliders />
         </button>

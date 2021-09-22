@@ -61,3 +61,7 @@ footer #icon-status {
   color: white;
   border: 1px solid #E9E9E8;
 }
+
+.active {
+  border-bottom: 1px solid green;
+}
