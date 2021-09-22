@@ -14,7 +14,7 @@ export default function Landing() {
   return (
     <div className='container'>
       <Header/>
-      <Content calls={calls}/>
+      {calls && <Content calls={calls}/>}
       <Footer />
     </div>
   )

@@ -1,0 +1,21 @@
+.calls-day {
+
+}
+
+.call-date {
+  text-align: center;
+}
+
+.call-date span {
+  font-size: .8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #BBBBBB;
+}
+
+.call-card {
+  background-color: white;
+  border: 1px solid #E9E9E8;
+  border-radius: .5rem;
+}
