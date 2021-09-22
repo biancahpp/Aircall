@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react'
 import CallCard from './CallCard.jsx'
 import { v4 as uuidv4 } from 'uuid';
+import { BiArchive } from 'react-icons/bi';
 
-export default function Content({ calls }) {
+export default function Content({ calls, archiveAllCalls }) {
 
   console.log(calls); 
   const getDates = () => {
@@ -23,8 +24,16 @@ export default function Content({ calls }) {
       year: 'numeric'
     }) === date)
   }
+
   return (
     <div className="container-view">
+      <div onClick={() => archiveAllCalls()} className="call-card" id="archive-calls">
+        <BiArchive className="call-card-icon"/>
+        <span>
+          Archive All Calls
+        </span>
+
+      </div>
       {
       dates.map(date => 
         <div key ={uuidv4()} className="calls-day">

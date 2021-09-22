@@ -20,7 +20,7 @@ export const getCallById = async (id) => {
   }
 }
 
-export const updateCallArchive = async (isArchived) => {
+export const updateCallArchive = async (id, isArchived) => {
   try {
     const response = await api.post(`/activities/${id}`, { isArchived });
     return response.data;
