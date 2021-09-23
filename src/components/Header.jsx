@@ -10,10 +10,20 @@ const Header = ({title, setToggle, toggle}) => {
         <h1>{title}</h1>
       </div>
       <div className="header-right">
-        <button onClick={() => setToggle('inbox')} className={`${toggle === 'inbox' ? 'header-active' : 'header-inactive'}`}>Inbox</button>
-        <button onClick={() => setToggle('all')} className={`${toggle === 'all' ? 'header-active' : 'header-inactive'}`}>All calls</button>
-        <button>
-          <FiSliders />
+        <button onClick={() => setToggle('inbox')} className={`header-btn ${toggle === 'inbox' ? 'header-active' : 'header-inactive'}`}>
+          <span className="header-btn-content">
+            Inbox
+          </span>
+        </button>
+
+        <button onClick={() => setToggle('all')} className={`header-btn ${toggle === 'all' ? 'header-active' : 'header-inactive'}`}>
+          <span className="header-btn-content">
+            All calls
+          </span>
+        </button>
+
+        <button className="header-btn">
+          <FiSliders className="header-btn-content"/>
         </button>
       </div>
     </header>

@@ -51,27 +51,45 @@ header h1 {
   border-radius: .6rem .5rem 0 0;
 }
 
-.header-right button {
+.header-right .header-btn {
+  padding: 0 1.3rem;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   border: none;
   background-color: transparent;
-  padding: 0 1.3rem;
 }
 
-.header-right button:hover {
+.header-right .header-btn:hover {
   cursor: pointer;
 }
 
-.header-right button:not(:last-child) {
+.header-right .header-btn:not(:last-child) {
   border-right: 1px dotted #BBBBBB;
 }
 
 .header-active {
   font-weight: bold;
   color: #333333;
-  border-bottom: 1px solid red;
+}
+
+.header-active .header-btn-content{
+  border-bottom: 3px solid red;
+}
+
+.header-inactive .header-btn-content{
+  padding-bottom: 3px;
 }
 
 .header-inactive {
   color: #BBBBBB;
   font-weight: bold;
+  
 }
+
+.header-btn-content {
+  display: block;
+  height: 60%;
+}
+

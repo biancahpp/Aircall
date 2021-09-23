@@ -1,29 +1,21 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo } from 'react'
 import CallCard from './CallCard.jsx'
 import { v4 as uuidv4 } from 'uuid';
 
-export default function CallList({ calls }) {
-
-  console.log(calls);
-  const [callsList, setCallsList] = useState(calls);
+export default function CallList({ calls, archiveOneCall, type }) {
   const getDates = () => {
     console.log('executed');
-    return [...new Set(callsList.map(call => new Date(call.created_at).toLocaleString('default' , {
+    return [...new Set(calls.map(call => new Date(call.created_at).toLocaleString('default' , {
       month: 'long',
       day: '2-digit',
       year: 'numeric'
     })))]
   }
 
-  const archiveCall = (id) => {
-    const filtered = callsList.filter(call => call.id !== id)
-    setCallsList(filtered)
-  }
-
-  const dates = useMemo(() => getDates(), [callsList]);
+  const dates = useMemo(() => getDates(), [calls]);
 
   const filterByDate = (date) => {
-    return callsList.filter(call => new Date(call.created_at).toLocaleString('default' , {
+    return calls.filter(call => new Date(call.created_at).toLocaleString('default' , {
       month: 'long',
       day: '2-digit',
       year: 'numeric'
@@ -38,7 +30,7 @@ export default function CallList({ calls }) {
           <div className="call-date">
             <span>{date}</span>
           </div>
-          {filterByDate(date).map(call => <CallCard call={call} key={call.id} archiveCall={archiveCall}/> )}
+          {filterByDate(date).map(call => <CallCard call={call} key={call.id} archiveOneCall={archiveOneCall} type={type}/> )}
         </div>)
       }
     </div>

@@ -15,6 +15,13 @@ export default function Landing() {
     setNotArchivedCalls([])
   }
 
+  const archiveCall = async (id) => {
+    await updateCallArchive(id, true)
+    const filtered = notArchivedCalls.filter(call => call.id !== id)
+    setNotArchivedCalls(filtered)
+  }
+  // From the reference image I'm not sure by what I should group the calls to include the number beside the name so I didn't group them for now
+
   useEffect(() => {
     getCalls().then(res => {
       setAllCalls(res)
@@ -24,7 +31,7 @@ export default function Landing() {
 
   return (
     <div className='container'>
-      <Activity allCalls={allCalls} notArchivedCalls={notArchivedCalls} archiveAllCalls={archiveAllCalls}/>
+      <Activity allCalls={allCalls} notArchivedCalls={notArchivedCalls} archiveAllCalls={archiveAllCalls} archiveOneCall={archiveCall}/>
       <Footer active={toggleFooter} setActive={setToggleFooter}/>
     </div>
   )
