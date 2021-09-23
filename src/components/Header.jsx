@@ -14,12 +14,14 @@ const Header = ({title, setToggle, toggle}) => {
           <span className="header-btn-content">
             Inbox
           </span>
+          {toggle === 'inbox' && <div className="underline"></div>}
         </button>
 
         <button onClick={() => setToggle('all')} className={`header-btn ${toggle === 'all' ? 'header-active' : 'header-inactive'}`}>
           <span className="header-btn-content">
             All calls
           </span>
+          {toggle === 'all' && <div className="underline"></div>}
         </button>
 
         <button className="header-btn">

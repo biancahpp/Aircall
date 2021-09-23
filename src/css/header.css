@@ -29,7 +29,7 @@ header h1 {
 }
 
 .header-left {
-  width: 40%;
+  width: 50%;
   display: flex;
   justify-items: flex-start;
   align-items: center;
@@ -41,7 +41,6 @@ header h1 {
   align-self: flex-end;
   font-size: 1.5rem;
   background-color: #FDFDFC;
-  padding: 0 2rem;
 
   display: flex;
   align-items: center;
@@ -49,14 +48,16 @@ header h1 {
   border: 1px solid #E9E9E8;
   border-bottom: none;
   border-radius: .6rem .5rem 0 0;
+
+  position: relative;
 }
 
 .header-right .header-btn {
   padding: 0 1.3rem;
-  height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
   border: none;
   background-color: transparent;
 }
@@ -74,22 +75,16 @@ header h1 {
   color: #333333;
 }
 
-.header-active .header-btn-content{
-  border-bottom: 3px solid red;
-}
-
-.header-inactive .header-btn-content{
-  padding-bottom: 3px;
-}
-
 .header-inactive {
   color: #BBBBBB;
   font-weight: bold;
-  
 }
 
-.header-btn-content {
-  display: block;
-  height: 60%;
+.underline {
+  height: 3px;
+  width: 15%;
+  background-color: #E9441B;
+  position: absolute;
+  bottom: 0;
 }
 

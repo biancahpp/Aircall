@@ -15,6 +15,7 @@ footer {
 
 footer .icons-wrapper {
   width: 35%;
+  height: 100%;
   
   display: flex;
   align-items: center;
@@ -62,6 +63,16 @@ footer #icon-status {
   border: 1px solid #E9E9E8;
 }
 
-.active {
-  border-bottom: 1px solid green;
+footer .icon-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+}
+
+footer .underline {
+  background-color: #43BF21;
+  border-radius: .5rem .5rem 0 0;
+  width: 100%;
 }

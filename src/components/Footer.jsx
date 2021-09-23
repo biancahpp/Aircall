@@ -7,17 +7,29 @@ export default function Footer({ active, setActive }) {
   return (
     <footer>
       <div className="icons-wrapper">
-        <FiPhone className={`${active === 'activity' ? 'icon active' : 'icon'}`} onClick={() => setActive('activity')}/>
-        <FaUser className={`${active === 'contacts' ? 'icon active' : 'icon'}`} onClick={() => setActive('contacts')}/>
+        <div className="icon-wrapper">
+          <FiPhone className="icon" onClick={() => setActive('activity')}/>
+          {active === 'activity' && <div className="underline"></div>}
+        </div>
+        <div className="icon-wrapper">
+          <FaUser className="icon" onClick={() => setActive('contacts')}/>
+          {active === 'contacts' && <div className="underline"></div>}
+        </div>
       </div>
       <div id="dialpad-outer-wrapper">
         <div id="dialpad-wrapper">
-          <BiDialpadAlt className={`${active === 'keypad' ? 'icon active' : 'icon'}`} onClick={() => setActive('keypad')}/>
+          <BiDialpadAlt className="icon" onClick={() => setActive('keypad')}/>
         </div>
       </div>
       <div className="icons-wrapper">
-        <FaSun className={`${active === 'favorites' ? 'icon active' : 'icon'}`} onClick={() => setActive('favorites')}/>
-        <FaDotCircle className={`${active === 'status' ? 'icon active' : 'icon'}`} onClick={() => setActive('status')} id="icon-status"/>
+        <div className="icon-wrapper">
+          <FaSun className="icon" onClick={() => setActive('favorites')}/>
+          {active === 'favorites' && <div className="underline"></div>}
+        </div>
+        <div className="icon-wrapper">
+          <FaDotCircle className="icon" onClick={() => setActive('status')} id="icon-status"/>
+          {active === 'status' && <div className="underline"></div>}
+        </div>
       </div>
     </footer>
   )
