@@ -2,19 +2,23 @@ header {
   background-color: white;
   height: 5rem;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+
   display: flex;
   justify-items: flex-start;
   align-items: center;
+
   position: relative;
 }
 
 .logo-wrapper {
   width: 8rem;
+
   font-size: 2rem;
 }
 
 .logo-wrapper svg {
   display: block;
+
   height: 100%;
   width: 100%;
   padding-left: 2rem;
@@ -22,14 +26,16 @@ header {
 
 header h1 {
   font-size: 1.8rem;
-  position: absolute;
-  left: 6rem;
   text-transform: capitalize;
   font-weight: bold;
+  
+  position: absolute;
+  left: 6rem;
 }
 
 .header-left {
   width: 50%;
+
   display: flex;
   justify-items: flex-start;
   align-items: center;
@@ -38,26 +44,29 @@ header h1 {
 .header-right {
   width: 50%;
   height: 92%;
-  align-self: flex-end;
-  font-size: 1.5rem;
   background-color: #FDFDFC;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   border: 1px solid #E9E9E8;
   border-bottom: none;
   border-radius: .6rem .5rem 0 0;
+  
+  font-size: 1.5rem;
+  
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: flex-end;
 
   position: relative;
 }
 
 .header-right .header-btn {
   padding: 0 1.3rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
   border: none;
   background-color: transparent;
 }
@@ -84,6 +93,7 @@ header h1 {
   height: 3px;
   width: 15%;
   background-color: #E9441B;
+  
   position: absolute;
   bottom: 0;
 }

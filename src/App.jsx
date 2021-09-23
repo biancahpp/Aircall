@@ -4,7 +4,7 @@ import Landing from './pages/Landing.jsx';
 
 const App = () => {
   return (
-    <div>
+    <div id="app">
       <Landing/>
     </div>
   );

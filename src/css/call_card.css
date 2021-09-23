@@ -1,0 +1,116 @@
+.call-card:hover {
+  cursor: pointer;
+}
+
+.call-card {
+  background-color: white;
+  border: 1px solid #E9E9E8;
+  border-radius: .8rem;
+  min-height: 5.5rem;
+  
+  font-size: 1.2rem;
+
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.call-card-top {
+  width: 100%;
+  min-height: 5.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-card-left {
+  width: 80%;
+
+  display: flex;
+  align-items: center;
+}
+
+.call-card-right {
+  width: 20%;
+  height: 2rem;
+  border-left: 2px dotted #E9E9E8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.call-card-right span {
+  padding-left: 1rem;
+
+  font-size: 1rem;
+  font-weight: bold;
+  color: #BBBBBB;
+}
+
+.call-card-icon {
+  padding-right: 2rem;
+
+  font-size: 2rem;
+}
+
+.call-card-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  margin: 0;
+  padding: .4rem 0 0 0;
+}
+.call-card-via {
+  font-size: 1.1rem;
+  color: #BBBBBB;
+
+  margin: 0;
+  padding: .5rem 0;
+}
+
+.call-card-archive {
+  background-color: #E9441B;
+  color: white;
+
+  min-height: 100%;
+  width: 5rem;
+  margin-left: .3rem;
+
+  font-size: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  transition: all 1s;
+}
+
+.details {
+  width: 100%;
+
+  padding: 1rem 0;
+  margin-right: 2rem;
+  border-top: 1px solid #BBBBBB;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.details-icon {
+  font-size: 2rem;
+  
+  transition: all .5s;
+}
+
+.details-icon:hover {
+  font-size: 2rem;
+  color: #E9441B;
+}

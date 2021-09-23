@@ -2,11 +2,12 @@ footer {
   background-color: white;
   height: 6vh;
   width: 100%;
+  border-top: 1px solid #E9E9E8;
+  
   font-size: 2rem;
   
   position: absolute;
   bottom: 0;
-  border-top: 1px solid #E9E9E8;
 
   display: flex;
   align-items: center;
@@ -44,10 +45,11 @@ footer #dialpad-outer-wrapper {
 
 footer #dialpad-wrapper {
   background-color: #43BF21;
-  color: white;
   height: 6rem;
   width: 6rem;
+
   font-size: 3.5rem;
+  color: white;
 
   display: flex;
   align-items: center;
@@ -59,20 +61,22 @@ footer #dialpad-wrapper {
 footer #icon-status {
   background-color: green;
   border-radius: 50%;
-  color: white;
   border: 1px solid #E9E9E8;
+  
+  color: white;
 }
 
 footer .icon-wrapper {
   height: 100%;
+
   display: flex;
   align-items: center;
   position: relative;
-
 }
 
 footer .underline {
   background-color: #43BF21;
+
   border-radius: .5rem .5rem 0 0;
   width: 100%;
 }

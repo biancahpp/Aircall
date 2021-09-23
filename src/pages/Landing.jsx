@@ -20,7 +20,7 @@ export default function Landing() {
     const filtered = notArchivedCalls.filter(call => call.id !== id)
     setNotArchivedCalls(filtered)
   }
-  // From the reference image I'm not sure by what I should group the calls to include the number beside the name so I didn't group them for now
+  // From the reference image I'm not sure by what I should group the calls by to include the number beside the name so I didn't group them for now
 
   useEffect(() => {
     getCalls().then(res => {

@@ -10,16 +10,6 @@ export const getCalls = async () => {
   }
 }
 
-export const getCallById = async (id) => {
-  try {
-    const response = await api.get(`/activities/${id}`);
-    return response.data;
-  } catch (error) {
-    console.error(error);
-    return error;
-  }
-}
-
 export const updateCallArchive = async (id, isArchived) => {
   try {
     const response = await api.post(`/activities/${id}`, { is_archived: isArchived });
@@ -30,13 +20,4 @@ export const updateCallArchive = async (id, isArchived) => {
   }
 }
 
-export const resetCalls = async () => {
-  try {
-    const response = await api.get('/reset');
-    return response.data;
-  } catch (error) {
-    console.error(error);
-    return error;
-  }
-}
 

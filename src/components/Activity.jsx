@@ -16,10 +16,10 @@ export default function Activity({ allCalls, notArchivedCalls, archiveAllCalls, 
           Archive all calls
         </span>
       </div>
-      {notArchivedCalls && notArchivedCalls.length ? <CallList calls={notArchivedCalls} archiveOneCall={archiveOneCall} type={toggleHeader}/> : <div> No calls </div>}
+      {notArchivedCalls && notArchivedCalls.length ? <CallList calls={notArchivedCalls} archiveOneCall={archiveOneCall} type={toggleHeader}/> : <div className="no-calls"><span>No calls</span></div>}
       </>
       :
-      allCalls && allCalls.length ? <CallList calls={allCalls} type={toggleHeader}/> : <div> No calls </div>
+      allCalls && allCalls.length ? <CallList calls={allCalls} type={toggleHeader}/> : <div className="no-calls"><span>No calls</span></div>
     }
       
     </div>
