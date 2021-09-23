@@ -21,9 +21,11 @@ header {
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   position: absolute;
   left: 6rem;
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
 .header-left {
@@ -52,9 +54,24 @@ header h1 {
 .header-right button {
   border: none;
   background-color: transparent;
+  padding: 0 1.3rem;
+}
+
+.header-right button:hover {
+  cursor: pointer;
+}
+
+.header-right button:not(:last-child) {
+  border-right: 1px dotted #BBBBBB;
 }
 
 .header-active {
-  background-color: turquoise;
+  font-weight: bold;
+  color: #333333;
+  border-bottom: 1px solid red;
+}
+
+.header-inactive {
+  color: #BBBBBB;
   font-weight: bold;
 }
